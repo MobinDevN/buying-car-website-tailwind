@@ -1,0 +1,846 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <title>Buying and selling cars</title>
+  <link rel="stylesheet" crossorigin href="/buying-car-website-tailwind/assets/index-CdQw3fxL.css">
+</head>
+
+<body class="font-Dmsans relative">
+  <!-- Header -->
+  <div class="bg-white w-full" id="header">
+
+    <ul class="md:hidden flex justify-between px-6 py-4 items-center">
+      <li>
+        <img src="data:image/png;base64,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" class="w-[108px] h-[34px] md:hidden" alt="">
+      </li>
+
+      <li>
+        <div class="text-center  md:hidden">
+          <button
+            class="text-white #405FF2 focus:bg-[#001684] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 bg-[#405FF2]"
+            type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+            aria-controls="drawer-navigation">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5" />
+            </svg>
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <div id="drawer-navigation"
+      class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64"
+      tabindex="-1" aria-labelledby="drawer-navigation-label">
+      <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase">Menu</h5>
+
+      <!-- دکمه بستن -->
+      <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center">
+        <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+        </svg>
+        <span class="sr-only">Close menu</span>
+      </button>
+
+      <!-- آیتم‌ها -->
+      <div class="py-4">
+        <ul class="space-y-4 font-medium">
+          <li>
+            <a href="#" class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-800">
+              <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 12l9-9 9 9H3z" />
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-800">
+              <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4 6h16v2H4zm0 6h16v2H4zm0 6h16v2H4z" />
+              </svg>
+              Listing
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-800">
+              <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4 4h16v16H4z" />
+              </svg>
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-800">
+              <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12l8-8H4z" />
+              </svg>
+              Pages
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-800">
+              <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12l8-8H4z" />
+              </svg>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-800">
+              <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M21 10h-8l-2-3-2 3H3v10h18z" />
+              </svg>
+              Contact
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-800">
+              <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Sign In
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block mt-4">
+              <button
+                class="w-full border border-gray-800 py-2 px-4 rounded-[16px] hover:bg-black hover:text-white focus:bg-black focus:border-s-gray-400 focus:text-white transition-all duration-500">
+                Submit Listing
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <ul class="hidden md:flex justify-between md:py-8 p-6 md:px-16 w-full items-center">
+
+      <ul class="flex gap-10 items-center">
+        <li><img src="data:image/png;base64,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" class="w-[108px] h-[34px] hidden md:block" alt=""></li>
+
+        <li class="hidden md:flex content-center font-medium">
+          <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M5 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4Zm12 12V5H7v11h10Zm-5 1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z"
+              clip-rule="evenodd" />
+          </svg>
+          +75 123 456 789
+        </li>
+      </ul>
+
+      <ul class="hidden md:flex gap-6">
+        <a href="#">
+          <li
+            class="relative hover:cursor-pointer  before:content-[''] before:absolute before:left-0 before:bottom-0  before:w-0 before:h-[2px] before:bg-black  before:transition-all before:duration-500  hover:before:w-full">
+            Home</li>
+        </a>
+
+        <a href="#">
+          <li
+            class="relative hover:cursor-pointer  before:content-[''] before:absolute before:left-0 before:bottom-0  before:w-0 before:h-[2px] before:bg-black  before:transition-all before:duration-500  hover:before:w-full">
+            Listing</li>
+        </a>
+
+        <a href="#">
+          <li
+            class="relative hover:cursor-pointer  before:content-[''] before:absolute before:left-0 before:bottom-0  before:w-0 before:h-[2px] before:bg-black  before:transition-all before:duration-500  hover:before:w-full">
+            Blog</li>
+        </a>
+
+        <a href="#">
+          <li
+            class="relative hover:cursor-pointer  before:content-[''] before:absolute before:left-0 before:bottom-0  before:w-0 before:h-[2px] before:bg-black  before:transition-all before:duration-500  hover:before:w-full">
+            Pages</li>
+        </a>
+
+        <a href="#">
+          <li
+            class="relative hover:cursor-pointer  before:content-[''] before:absolute before:left-0 before:bottom-0  before:w-0 before:h-[2px] before:bg-black  before:transition-all before:duration-500  hover:before:w-full">
+            About</li>
+        </a>
+
+        <a href="#">
+          <li
+            class="relative hover:cursor-pointer  before:content-[''] before:absolute before:left-0 before:bottom-0  before:w-0 before:h-[2px] before:bg-black  before:transition-all before:duration-500  hover:before:w-full">
+            Contact</li>
+        </a>
+
+        <a href="#">
+          <li
+            class="relative hover:cursor-pointer  before:content-[''] before:absolute before:left-0 before:bottom-0  before:w-0 before:h-[2px] before:bg-black  before:transition-all before:duration-500  hover:before:w-full flex gap-1">
+        </a>
+        <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-width="2"
+            d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+
+        Sign in
+        </li>
+      </ul>
+
+      <li class="hidden md:block">
+        <a href="#">
+          <button
+            class="border-1 border-s-black py-2 px-4 rounded-[16px] hover:bg-black hover:border-s-gray-400 hover:text-white focus:bg-black focus:border-s-gray-400 focus:text-white transition-all duration-1000 hover:cursor-pointer">
+            Submit Listing
+          </button>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="bg-[#EEF1FB] pt-16 text-center">
+    <p class="text-[16px]">Find cars for sale and for rent near you</p>
+    <br>
+    <h1 class="text-6xl font-bold">Find Your Dream Car</h1>
+    <br>
+    <div class="w-[88%] md:w-[960px] py-4 px-6 md:py-2 md:px-4 rounded-[16px] md:rounded-[64px] bg-white mx-auto 
+         grid grid-cols-1 md:grid-cols-5 gap-4 items-center mt-8">
+
+      <div>
+        <select id="country1" class="border-none text-gray-900 text-sm rounded-lg 
+             focus:ring-black focus:border-black block w-full p-2.5">
+          <option selected>Used Cars</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
+
+      <div>
+        <select id="country1" class="border-none text-gray-900 text-sm rounded-lg 
+             focus:ring-black focus:border-black block w-full p-2.5">
+          <option selected>Any Makes</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
+
+      <div>
+        <select id="country1" class="border-none text-gray-900 text-sm rounded-lg 
+             focus:ring-black focus:border-black block w-full p-2.5">
+          <option selected>Any Models</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
+
+      <div>
+        <select id="country1" class="border-none text-gray-900 text-sm rounded-lg 
+             focus:ring-black focus:border-black block w-full p-2.5">
+          <option selected>All Prices</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
+
+      <div class="flex justify-center md:justify-end">
+        <button
+          class="hidden w-[55px] h-[55px] bg-[#405FF2] rounded-full text-center 
+             hover:bg-[#001684] hover:cursor-pointer focus:bg-[#001684] focus:cursor-pointer transition-all duration-700 md:flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+          </svg>
+        </button>
+
+        <button
+          class="h-[55px] text-white px-5 bg-[#405FF2] rounded-full text-center 
+             hover:bg-[#001684] hover:cursor-pointer focus:bg-[#001684] focus:cursor-pointer transition-all duration-700 flex items-center justify-center md:hidden">
+          <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+          </svg>
+          Search
+        </button>
+      </div>
+    </div>
+
+    <br>
+    <img src="/buying-car-website-tailwind/assets/car-main-CotWNM3L.png" class="mx-auto w-[750px] mt-8" alt="Cars">
+  </div>
+
+  <!-- Type -->
+  <div class="pt-4 md:pt-16 text-center">
+    <h1 class="text-[30px] md:text-[40px] font-bold mt-12">Browse by Type</h1>
+
+    <br>
+
+    <div
+      class="w-full p-6 md:p-0 md:w-[85%] mx-auto grid grid-cols-3 xl:grid-cols-9 justify-between gap-4 md:gap-8 text-center "
+      id="type-car">
+      <!-- Types list in JS-->
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-[85%] mx-auto mt-16 md:mt-24">
+      <div class="bg-[#d3e5ff] w-full md:px-18 md:pt-14 md:pb-10 p-6 rounded-[16px] text-left">
+        <h1 class="text-[30px] font-bold">
+          Are You Looking
+          <br>
+          For a Car ?
+        </h1>
+        <br>
+        <p>
+          We are committed to providing our customers with
+          <br>
+          exceptional service.
+        </p>
+
+        <div class="flex justify-between items-center mt-4">
+          <button
+            class="bg-[#405FF2] py-4 px-4 text-white rounded-[12px] flex gap-2 hover:bg-[#001684] hover:cursor-pointer focus:bg-[#001684] transition-all duration-700">
+            Get Started
+            <svg class="w-6 h-6 text-gray-800 dark:text-white rotate-[320deg]" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 12H5m14 0-4 4m4-4-4-4" />
+            </svg>
+          </button>
+
+          <img src="data:image/png;base64,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" class="w-[55px] md:w-fit" alt="">
+        </div>
+      </div>
+
+
+      <div class="bg-[#ffd7e9] w-full md:px-18 md:pt-14 md:pb-10 p-6 rounded-[16px] text-left">
+        <h1 class="text-[30px] font-bold">
+          Do You Want to
+          <br>
+          Sell a Car ?
+        </h1>
+        <br>
+        <p>
+          We are committed to providing our customers with
+          <br>
+          exceptional service.
+        </p>
+
+        <div class="flex justify-between items-center mt-4">
+          <button
+            class="bg-[#050B20] py-4 px-4 text-white rounded-[12px] flex gap-2 hover:cursor-pointer hover:bg-[#001684] focus:bg-[#001684] transition-all duration-700">
+            Get Started
+            <svg class="w-6 h-6 text-gray-800 dark:text-white rotate-[320deg]" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 12H5m14 0-4 4m4-4-4-4" />
+            </svg>
+          </button>
+
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABvCAYAAAANB/VeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA7hSURBVHgB7V3NbxvHFX+zSwZOJduiT0kD1CSaQwOkiFQ3AXxJVif3FvnWOHJEX5uDrR6LFqYPPRaRTz1qFdtBbrGPvVTrtkCAXqT8AYEYoGgubUUrCmLL3Jm+N7uUudyvWWqGXIr8IYol7uzscn87M+9r3gOYYYYZRgcGmuFc218EGxxgVh0Yu4gfLcAkQYivQPA2CNj17tc8KCm0EOes7jtg2zfxWzvY5WQRlQnRwe/jAfcfefdqLpQIQxPnNPcXgFs3sYdbp4usNIi2JJH5dzy31oYxYyjinOv7t8Cybk8HYYMQNI263qfn78AYUYg4HGV1EPYm/QpTDySQ8eVxjT5l4nAdWwHb2swbZWfOALxeB3jtVYAatrzQ1/rwe3j813/Axr++ZR0oJQRO/2IRv+MiPpm38IN67incX8f1bwNGDCXinI+e3EYJsZXV5s2fAbx7GUlrJB8XINYvXTw/8i94EjjN7xzgvInffS2zoRCtUU+ducTlkfb2EsCV5ejIGkC7y/2r7zRquzChkEsEt1qZBI6YvEziAiHE/iTpWK0G8MFK+ggL0X7G/eXLjfFLYToQrvHbkDaFjpC8VOLCm9xLOvbmG0jaVYCXz0AWThVp/cBZaANH383Eg8wngcUDw0gkTupowtrBw/XBY7/EqfHaVchDB0lbOo2k9eA0n7RAsNsJhzpIXgPJMyqAWYmfCqmj1Qc/ViQNLUawfppJI3jueVzzRNK0uBCqTEYRG3FpUyStaX9Yh1wIAPfSxXM3YErgrB3QmufEDhieMuMjjqSnAZBu9rEaFe0j7o/VojByMJ/moPi0KOzbYBAR4uRoSxB5ST+7oGDcQl1t67RPkYOQaxmDpLnIwefpgCFER1zCaKMp8lfLoILOEecuTCE895xL/8QOGBx1UeIYvDfY4IoDSsC17eG0jbYIWOISsSgldAM4Jk761IDVBxv8/A1Q64izLZhihILI4Fq3AL69AgZQOf7NsmIXIEU7R8nuobPUOOuBBogVfEPnK4uoU+APetEt6yKK3YvBwRSLBQNytZDTs422xW/Qao+We2uX3ddzT8oQYiummFtyFnNBM14Qx9hbgwfJcKwG8RhOCLGKBl0ghVZa5xeA2aGyIuR/2Sf3CMVzLTrJ7vXZQSX5IRK/NRISLf4Q17VBi4oDBtC/xi0OHnztFVACKtxDG5DFtf1FsXqIuhAL9SGdzll6AaBJfdM1xK9RajaLpOdQBwOQxIULaOyBkU9NBQLYUMSJDw/RiF3dgdE4Zh2oVPfkNQ1BqgZCfBO7cFP/C9MbcTHSLhR4720o7hgVq9+juwg+gVEDrymvba7//fiHlTpoRkBcNz6cawajSYIHJ1owNoiWuZE3Gu++BVrQVb7ZYJ0ZJ2khaORdO1yECYUW4p4m2erSYFe3oSywxjBVa0IFRghx7aCJb3q9yDnYPljwBepqvWmIyRhHdJ+EazMTdZDrdFylyYFDasjI9T0NGClxqEzfVGuIUirz78Lzqsc+f7kNBSCnP5tUG9QJhSQ071okqHgwYRgZcYGCDQprirjL7s8PLTiwz+ZJNaEfV6weuPi2rOWcMpGjTpNwogAhmrltGGvjA9Qm7bH755oACsYBwfLILR1GQpyUJJmV/3CEr+BjL3z1/D7RuiIMWfFNYTQjzrZbuW3kaDv3EDRDToHYd27DbsWYRcUEjBOnPNpAmAt5EFzB5cRuTtKoMz/iKi/lk0aj7d68C6ZQ6W5Avq65MEmjzjxxKkIJF3fBIJiMcVS5BlNUV8YPI+qAVLQtnB5J2RYKCjcTt8X1Q/MPLc+vh6MO72NPKvucb7HPZCxJKaGdOPzim/jFm8Efqmf1WUHGjeBFI8+7g4bot9iDeQOS7smhdaqUI61H2mkAg1vyO5UQetc4y5o4RTYXjBkJ9jkpNAsnvAGnDUHKj9JBM3HWHpw2JIQilAF6iWMwRGyleCxDuDksyR8GN5QsHUr98huyTxDLQ/drMe3WHB3QKlWSEo2W9nroKlGAuIMmqdbAh6Fl/7uWej9K/ULxfrGfe2ddKCG0K+DBA+NXcYp5lPmGM+amPNy+foZ425X6zfC/0T0LmjnEclY/44YRywkZi9mDsytIXnqgrK9gyagMYb+0LYVzMvpFuybqbs2y++dG54+LohM6PDPBXGrDiwgHu8zN95iHpIwkGssUxkOcKMND409ggjEe4hjaBJVdKNZ5UEddpVFwbcuMfkZpE2PotkEzDBMn0kbWAhzlbz8KzU1FbJgLYWxLNo5sc9YQi5MLqX38NxNGsu2ZJU5kSZXW7axNGKEDtrg6INhm1mjO71fkx6hkgEjyts41UDpF3bHakNkZDMAwcVliN05rdjVxB42QWWar24VjMHv9Pq/uJPZLozGv30r1RMT14LlnPc8tFlpYBEbD80hyFKuH9CCSw/LoAdIOmtVDD52pwdpgyaBWB0504b5+yYLCcbrt9ZudvUxJKi0DzMdVMriLIy8vYYuDD9YB/XDwBhzleYXudUJgXKoMY0k8KDvI4mIy7kUzRqMOVGxNhmNDoHtTsriUByMhTq4btrVcTvJwDcR7m5S1rYeRKeD0YNi9uYZ04ZSBQLkLCNbR/OWMkzSZZWIIjHa3Dsg1jxTUDbF6gEqwvUa3Hm0gt1V9BVogJcnog8G1TBqS743XiCzVlUpVJiYXHx620Xe4XiSSe+TE9UA3KdNZwEBMh5CpLbQEpqI64OI/0TgYIq0Mlv8gLN+Rv0u90iLDgccU81yOyzsgET5A78UHOIVWKhugCxw2otNySUgjMGtwE+YCPD2jPG2OlTgCuz+/LB2vFGZg/2hJ53ojXUdSKMK+pWNUbrsqCXgNToCxTZX9MLFL57jv4EVw4ZRh7CNuhuEwI24MGFYF6EcppsppgPRMcFgBm72fuhGm4m+Ka999BZbw4ND32MN0CXNGnGHI0TVno6TM1uT8lr0RJjS2s5swb0HgNeFbwJHEz6PO2NlUaRBSyZ6r7qjtyE0EEmltBi6qaP6xGXGGIEkb1hmc3GNLfHBwbKyYEWcKZM7KJI3CDimbbZF0WuzYIT1b4wwgDHJyYgcCO+xdqMxvoPevEz0nzIgkyEvP3kvMitRnBZoRZwJJqa8Cn1+q+6g/IxL9LYm04JYkURYkhDtoZXJ77WfEaUYYpBSPsRH+OnPn2qCIkMhm2vHZGqcbFTspMGpXt1mvtCNO5onu4pvLoeN9NknVHlkCcSfPEj+IUo64oKKWtYM+q22o2juy3OdkQ/teidIRF5K2Hak6wljLRCZxI5BJUGMfvgeaUSriEkk7hv5M4kaQHHbv6K55UBriskmDNoV0wwQgde9dpfqFTvK0CidhtUcZACM3TzB+VWWnSh5pVP0QCiCspvw+6AD3t7x7NRcKgXbbxvaZy/0QqJzf0ZFqSq9UKawv4FiHYVTUaBtJWc4iT4W0ItuUkLRmWgnsoWDZVMCvXahsJmXr819ai1k/yATGrE3x4WGYB9pHFw7rhAWdOnDY3c1y5URuC7RiUBRm9ZC8elJr3aRJWLb+7EaiWJ8yUssXySU4ZQMiEJVrhi+YQOs/0AvPtmG+ui9rACmkodK9xnnxj1gieUZII2iLyewDg8J6mLR8cBgmelu6cnBU7mURqDlBjU8lcNsJByLkGSONYPEWJN7DkBBEmj+U1eNFlJl4BEXBZAY/IvCT5MMgHySuR/ZO/wEqivT734LaNThb7hX+CwUUquZRj7eUhR7QCiIcSC43RsXPl3RsvXWaVH5FnDC2o9LWtTlRhi4IaTQuLjQJcNmD+Uhd6B5x9cHa38MS19cfvQhFHlwnHGkTZN4qDtHEl6kra/o4L/J0ioXAd5dRqYT2OTyYPw4W7hFH1eJj5bP++Du1UpuCw41LjaiIG45iGnkq5E0FaXkQzR/q0PVbMBg2H6ADleeNXoi6XOPSCtb9bx9ULxkzrEoSAv2rnXPyjLQQckfT/flmSuajSLLvfuEk9uC+boPaBe3kIX5MHhV9TQIt/MGaNvWk9SPIIZaQMquvIsnxVnbn+hO0NrCIBPPTBsDHN0AFHcb9xlIjXXkMynlWSGCog9RvfM9T3JkyjZApP7rV+JxXeV6j6fKF5cTmu7gmRdp8jeLKD0+V1rmFbmAx8dIahCR5MIMSiByxevBNLAPSUbWO/989nipTCpDD374EJdi2Pek+sxLCio84K1Bxogq4iM+rRByNulwIcHb2JquwUJkRZkeKe9MrXSkPRIkL8lBFQKT9RbE4JgfrFsygB92XEiPFeupALM+O89ETFxvE9IjfoJDyukKO82copFxu6E86Nino39stK4bQnvPu0dZg7H9mH5QSK6iPHoXMxTInxcU4cYEyTlaUyLR3oRaQl1sfnIH3i5+cK+Q/O00g6z4kBcPKGq8onDH+CJXs3SQigw0i1SaVrEk0CVbsRi8uMzGzldNE1UCwmHHzx68G6kGelCm4v36pUduAKQRKgm21XJiUEpLstqE/jtFA4U6KDReCEqQvkhqkpiRz1g4S3xxV8nzuL7/dKOB8PCVIHXEngSzTNhdZqNLdOikumn9/C/CnP6M5LEd1ti37i3/u7S/CtIHSX8Ew9RfSwALX0OCnWadkGYppxF3B7t69nNUDdLo48t5pTJ9JSxqMfd8J6ucNG54nN4i0BjeIEFjeqUheMwwASgQJLVccgLeX0vuY5jWPELhyKOWw5UiDPEPbblrZNdrRw+ERCihuVk6WXOIIKi6aHoFk30ySPAWAe8T9O5OiKkjp2qe4EAt9i3y3eKRXNpKFGH5VdY+BEnGEbM92FETia6+gIPNKMKX2BJmnz0T771/yu//5b0lz/hNJsnqV9NDXI8dw1kDytM0aicR1Udz/XM3jrkwcQb6F3Grhl5uYWqIaESTJ1oSTElcoWIgs/N6n52+RDw10BuRMBFipZomhorzI8RmkaIcbQRTUFIDprlN+slp7habKNARhd9YKcLaCPWrfmTI20EtJyWKAP9TtpRfXD9E6BX3WKfGYkp6qnq+FuH5EPN1cersX0s04ZYNog0UBrPTT3TXtoUfymij6U5Z2VLLn3CR9bYYZZigD/g9JOt3bVT5bSgAAAABJRU5ErkJggg==" class="w-[55px] md:w-fit" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <!-- researched cars -->
+
+  <div class="pt-4 md:pt-16 text-center w-[85%] mx-auto swiper mySwiper overflow-visible">
+    <h1 class="text-[28px] md:text-[40px] font-bold mt-10">The Most Searched Cars</h1>
+
+    <ul class="flex justify-center gap-8 border-[#E9E9E9] border-b-3 border-solid mt-6">
+      <li class="border-[#405FF2] border-b-3 border-solid pb-2">In Stock</li>
+      <li>Sedan</li>
+      <li>SUV</li>
+      <li>Convertible</li>
+    </ul>
+
+    <br>
+
+    <div class="swiper-wrapper overflow-visible transition-shadow duration-1000" id="researched_c">
+      <!-- research in JS -->
+    </div>
+
+
+    <br>
+
+    <div class="flex gap-5 justify-center">
+      <button class="prev-btn py-2 px-4 border-2 border-gray-300 rounded-[30px]">
+        <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5 12h14M5 12l4-4m-4 4 4 4" />
+        </svg>
+
+      </button>
+      <button class="next-btn py-2 px-4 border-2 border-gray-300 rounded-[30px]">
+        <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 12H5m14 0-4 4m4-4-4-4" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <!-- who choose us -->
+
+  <div class="bg-[#e8f5fc] p-8 w-[95%] mx-auto text-center md:px-20 rounded-[16px]">
+    <h1 class="text-[28px] md:text-[40px] font-bold mt-10">Why Choose Us?</h1>
+    <br>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="w-full text-left">
+        <img src="data:image/png;base64,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" alt="">
+        <h2 class="mt-3 text-[20px] font-semibold">Special Financing Offers</h2>
+        <p class="text-[15px] mt-3 text-justify font-light">Our stress-free finance department that can find financial
+          solutions to save you money. </p>
+      </div>
+
+      <div class="w-full text-left">
+        <img src="data:image/png;base64,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" alt="">
+        <h2 class="mt-3 text-[20px] font-semibold">Trusted Car Dealership</h2>
+        <p class="text-[15px] mt-3 text-justify font-light">Our stress-free finance department that can find financial
+          solutions to save you money.</p>
+      </div>
+
+      <div class="w-full text-left">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA9CAYAAADxoArXAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVMSURBVHgB5ZvPbhtFGMC/mY0bhUBjCyEuHNZPgG8cu+HMoeaICl64t2ofINSBE6cSyo1DHdQDR/IEXZ4AH+CCkGok4JCK2g2KUGh2p9836/V67f07O7u2258UxTuenczPMzvzzYwD8IrB4CXCsscdEPwRvpwA8/adQWu0mGcLVoh1Y2zhR94BbrwLQvwBnuc4D1sOKBDKsiZeNsHjNv7uL+ZbSQtj5UwQxgN6ufyuGCW1Tkp587IEluHGllG7sC8rK2emZJtMKzyE7PJyyxK1CsfJfnDNgLfe5DD604NffvfgyVMRvJUpXVSWqE14Ufa1HQZf3tyG9jthFU7/EXBw/yKXtIosUYtwHtmAPNKqskTlwkVkA9Kky8gSHCpEQXaCiodvtxqtJ+PLNpCMTxNH9UfWx2O7jCxRWQuryDJP7LdaV4bRMgwKJMyY/IVliUqEdchGy1qSVpIltAvrlI2WOZNWliW0ClchGykbDAvAdVRlCW3CVcrqRIvwpsgSpYU3SZYoJaxbdhpU4CqKUaDRxWd1ArnqQCsvYeIqq5u14FAOPCqSpfI6dAmucR3ycAl+fqoHBSf2uJmWXWkDQFW2e/O8afXO8D7R8aMlgfJsCK57Mm3ZMIIyXAfysAUOCBmRmeAv/G9DzMI/oHCXVpH99bfL7sG3z+9C7IJ/icLzLNbJms7T8n7n+Go7KW+hLq3asgf3/7ehIlkC8ztzl2Za3tzCyt341nkHGOvNUpk4AtZoo1gL+9enEC4QiJFKUJH13M6TS7jUAMWN3lz6wBns3XYGOyQ2cQZXB9SilD/4U3LwKooLdnjByo3SGkbjUIC5R4uZZYsKcTJLcI1CwtYnZz38UO+Ff0McpeVPFa4gqBiBRqQsg8F8+bLXpJAorE8Wt11DklovzGPwXBFYnOz08UglVlhrywoIuyvOtf6qJ4rz/V4fK9/FwQ1H6NezV04Jskp7WhVEULQ98xgoKPBxcJ7MbIkkysgSfKFyyrJ0bBI3wsp4ONrVLBkoKFBWlpgJl5KlzTUDIx1h/BwnIwN6IQ5nCSIyVeVChywhhUt3Y8bDlnV5/MCEB2Wz1wISQ784dMkSfgt7vK9t6mGQO+rJg05ZwhdmcC1I+OzDRnFZMRfdMOjFhnpcHl8GN5SaesrsaXF/mmAmXexi677/npGUN7llDfdHmIWHTD4e1kf+AEbyVu/ZvUg8zb2vIYMqZInIenh3JzFfVgRl0oMZznK4iG/gANY785PnwdAvq9JVyRLUpSfTHzjFs5zTp4s1zL1Tkf3sMnFMi4e0LFXKEny6bzST+eq7Czj/L5RmHnRTZM3lsx62j1PQMYQroAm28k9+FLVnQwpVyxJ+l2buHZpD6eXjvwR8/s0FfHFrG7u4OGm1tp3Eu+l7FCz2YMuBgtQhS8hRWgYGTNwJEgPpv0+Fk363NwA/8C9Vubpkicj8Y9nP+jjF3A1TcPrwv2CSuV2qSp2yRMzioT7pumWJ2AijDum6ZAXFA/wKuQzZw93DxJCqSul6ZbfCWeTSaCfueOAU0seBLFzhUDBBEVSBHcI4VibL2Ij9sDNK3dPSLb1KWdw6kmvyXCcPOrr3qmUZbg3Ly7wFlZFeF1mZBAVQkV4nWZkMBSkivW6yROHz4ZSBzJzPt46y8m1QJKalR7gqOgbhoRi3Igv+NZGVWaAEy9KxrI0sUeq7ln73druQdGYk18HrIyuzgiYs++w6eMKSleC0SceHzuANBzRTRlZmhw2irKy8BTYEHbLESv+NpxC88QCCAzlFWVkMbA5+YFNCduMQN/61hC20HuW89LwA0UtJ6VD8nowAAAAASUVORK5CYII=" alt="">
+        <h2 class="mt-3 text-[20px] font-semibold">Transparent Pricing</h2>
+        <p class="text-[15px] mt-3 text-justify font-light">Our stress-free finance department that can find financial
+          solutions to save you money.</p>
+      </div>
+
+      <div class="w-full text-left">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAYAAAAeYmHpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAdiSURBVHgB7Vq9bxxFFH9v92xCUGyf80F7kZIqiUiapMweFR8pbCGUoIT4TImQsEVBhy8FBQ2JoUE0OYOLdHH+Am/KVAn/AN4oQkKA4rNDCMG+fbw3+zW3t2fv7e6FDfJPOt3c7uzc/Oa9eV+zAHvYw/8WCAXDurJugWFM8cjn+ecEDAx0gOgncN0Ve7lqwxBQGGnrw/U5JrvAQ2Yg2g/kALrTdqv6AApEbtJWY30CyLwtTRgWiJr2D+PXoCDkIu0RNlZ5mNPBtf2vIlw4b8LJ4wYcmTTUtUe/uvNffk8rQP/cDvsiTAOMxCTYYS2hCVbtBiDOxKZ6w146MA8FIB/pqxstfXJC9uLbI/Da/mhYF2n20NhoS/Wf2VyFQCMQ63brgN137MZ6jTXoOjenosE68/aP1RuQEwZkBO/hLmlcfKsCH7032kWYAK4FhAcF72PHXhqbZtVeDC8a5oJajJzITNozWh6E8MV3RmIdyDk4PtKEnOC9PCdf/k+xHwuQE5lIKykD1qR9eBKhfq7S08d1oTDDA9jRx2qwtC3IgWySNsxQrU8eY4N1MG4ayDlUzabWSWBVtyGSNuSV9sCkeZXF+lrBbzFccZDrLkLR6Ja2lUfag0vaNeaCZv2smSBlGZTdU8EoUtoDkVaWU7fYCVJGpFa1+qoDw0BB0h5M0q7RDJrJe5nR6RRnwGJQ0iZagmg+U5ABqUmr6MtLIhTetXotNk/o7o5SRrrjt7jPdrZ42nCb3vPQBgNtGCbETXFERfJ5f/4JPd7Y6vn8sf5815VXi1fEfHKMkzoMtWY21gLf/MnlUXjznBnrQc7k+OhReAmQSr3jwUgv4YKDkSEj3Z7WgpFzp8yEDsUGI8PGrqRVJUQLRi4kGDBEzX++BKj0u6EMRYfTOk3K/YIRcVOcZi4we4nWCqycDIw2e5CHvNdsZmazi2sndUo0ZB4BmIuXfr5b2NdDWoKR6Y+f3gFTVU9KBC41EbSSKi5dkt6p9HP2VD8p45IahaBkQI4eocleh4uUbl2Xerd6q9IPhKUflTaySr/OZM8mGTAVjIza0uQFY3dVqcF/Cik10Wk/VK5513jLeYKsB71C0fl7shn8Ti4MdMN1uRRUUqttNTaaQBglJUTXWNWb0oysN0IjaKYhXHY3ZbeYIFK0nxE/DaI4RZrd0pQefKQhjG6nDiWHIu7F6QImbFrS8CRtGFbQMSnaCiCWGl2ooztyZmjpY9GgMMnh/UiWfAWGLHRNRyaTw3ECmp8cG81dfn3hIHwQWi7EcflKmVpKZfMlJCwwO07YRj4jgx0isi4QPISSgVR4XJH8nl0Uuynig7/t7Vm8VXX0flJ4CNyp3Rqz5Voq0hxbr0FJQJe4ZFWp3AQ9gCKlv3zdaPB3M/6MHBxAZNBSSrokoA82p8AEIdwnvsdU1ZjCSStf+DdM2DE1ywuPMMbie7rLRqoFWyM27NvXxha204yVijQR7FoR8ZOUBqtaDV5RlRaeAK5IBdNXr8xQKm3A9fACqoP7WVz29uigCKx3uEJrv7gwCKQszATveyEs1qI7KkPjRTDX1ILkgclVWPTHFsKmWcfl/ieeu8EPTtywOL96z4WnzwZImci4rZ9Pg7eA3WrGC5K1Rq2kjEZ0Vk3uPLbyBUaKtH964EhbCH/xzXP47bFGHPGNpIf92llEGGme1fkoH7FW5Rs0i8mLcxOyoGJqC0p3WaVzn55Eexo7s6yKklqyinvETxw31BsFJ46ZE7+vb1mHq2wwdGhVFQnuOdYNAxjZxyzdM6LeoKwt1qyr65z5aAsRcoG2vVztQ0ZCxyCkIhsygK48ke1lBX7c0CZp61mJSHr1Xge+Xd6Cz756Dj8/cpPchCYFt2fSKnHXY1/k8yfDvNnz4apLf/XXqjcu7+cBQVc2pRbfBCFtjijbYnRPUtKxzjRAtzRE5T//+q/dfKADuWDWYBjAXp/e47JYOiKxFavxxOIqgaUssqGKbE7CkLIQlmp1VDR0I+FPw6MgVmOReq8vNcjhBW9BEogehIeGBp2GQSGZFfrbAzsPvSnlALsicSWBO2qLlvhGMXjziH0rNvz78g7JwCcgvB8t/loN/6OyfRT7VDkTn7+8uRa6Oy4ZiavL/s6JwHBFso7/S4qKq+Kz1VtEZKxphGV5M52A+P64Hf7HdnQ+vhuUAdP8e+Dbc5FWhgpVBcWJrqL/poJmgJRlH2tBVqCrLZixQJf/nNntEb9PM7oSjZFLvQOow3pXRU3xF954P9JiLsI+WGr3QfcWxPajs70YTyVpirfVgcoC39c0Qvl3K5wVFAiv8FbxJ1Zh41RMSUlJjUtVfW7bbHBVcYDLXhxEibHTtcwPW7W5FP4WcNHoIYxydJP26IizsMqBqXj2lc+QDRm9hEVqlTN8bVYR6v+k3KuLSielm6WVdDLhbjWlxrMabG9Juajmd2pLbo23dt5WpSSdhnAelI70sAmrIaFEeBGEBeUyZEiRbx0SYUHJrLdXjB8m4VKCLj2rUYNS+uE97GEPMfwL70/zBeq3TMsAAAAASUVORK5CYII=" alt="">
+        <h2 class="mt-3 text-[20px] font-semibold">TExpert Car Service</h2>
+        <p class="text-[15px] mt-3 text-justify font-light">Our stress-free finance department that can find financial
+          solutions to save you money.</p>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Latest Car -->
+
+  <div class="pt-4 md:pt-16 text-center w-[85%] mx-auto swiper mySwiper overflow-visible">
+    <h1 class="text-[28px] md:text-[40px] font-bold mt-10">Latest Cars</h1>
+
+    <br>
+
+    <div class="swiper-wrapper overflow-visible transition-shadow duration-1000" id="latest_cars">
+      <!-- Latest Cars in JS -->
+    </div>
+
+
+    <br>
+
+    <div class="flex gap-5 justify-center">
+      <button class="prev-btn py-2 px-4 border-2 border-gray-300 rounded-[30px]">
+        <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5 12h14M5 12l4-4m-4 4 4 4" />
+        </svg>
+
+      </button>
+      <button class="next-btn py-2 px-4 border-2 border-gray-300 rounded-[30px]">
+        <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 12H5m14 0-4 4m4-4-4-4" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="w-[85%] mx-auto">
+    <h1 class="text-[28px] md:text-[40px] font-bold mt-10">Need Some Inspiration?</h1>
+    <br>
+    <div class="flex flex-wrap gap-6">
+      <a href="#"> <button
+          class="px-6 py-4 rounded-[16px] border-1 border-black hover:bg-black hover:border-s-gray-400 hover:text-white focus:bg-black focus:border-s-gray-400 focus:text-white transition-all duration-1000 hover:cursor-pointer">Automatics
+          Cars</button> </a>
+
+      <a href="#"> <button
+          class="px-6 py-4 rounded-[16px] border-1 border-black hover:bg-black hover:border-s-gray-400 hover:text-white focus:bg-black focus:border-s-gray-400 focus:text-white transition-all duration-1000 hover:cursor-pointer">SUVs</button>
+      </a>
+
+      <a href="#"> <button
+          class="px-6 py-4 rounded-[16px] border-1 border-black hover:bg-black hover:border-s-gray-400 hover:text-white focus:bg-black focus:border-s-gray-400 focus:text-white transition-all duration-1000 hover:cursor-pointer">Electrics
+          Cars</button> </a>
+
+      <a href="#"> <button
+          class="px-6 py-4 rounded-[16px] border-1 border-black hover:bg-black hover:border-s-gray-400 hover:text-white focus:bg-black focus:border-s-gray-400 focus:text-white transition-all duration-1000 hover:cursor-pointer">New
+          in Stock</button> </a>
+
+      <a href="#"> <button
+          class="px-6 py-4 rounded-[16px] border-1 border-black hover:bg-black hover:border-s-gray-400 hover:text-white focus:bg-black focus:border-s-gray-400 focus:text-white transition-all duration-1000 hover:cursor-pointer">Petrol</button>
+      </a>
+
+      <a href="#"> <button
+          class="px-6 py-4 rounded-[16px] border-1 border-black hover:bg-black hover:border-s-gray-400 hover:text-white focus:bg-black focus:border-s-gray-400 focus:text-white transition-all duration-1000 hover:cursor-pointer">Diesel</button>
+      </a>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div
+    class="bg-[#405FF2] w-[90%] p-12 md:p-20 mx-auto mt-8 md:mt-12 rounded-[16px] text-white flex justify-center md:justify-between items-center flex-wrap ">
+    <div>
+      <h1 class="text-[28px] md:text-[40px] font-bold">Who is BoxCar</h1>
+      <p class="text-[15px] mt-3 text-justify font-light">
+        Excepteur sint occaecat cupidatat non
+        <br>
+        proident, sunt in culpa qui officia deserunt mollit anim id es
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 float-right gap-5 md:mt-0 mt-8">
+      <img src="/buying-car-website-tailwind/assets/208-D_3j-nok.png" class="w-[220px]" alt="">
+
+      <img src="/buying-car-website-tailwind/assets/g2.png-BLR2IcHT.png" class="w-[220px]" alt="">
+
+      <img src="/buying-car-website-tailwind/assets/g3.png-DJlze5l0.png" class="w-[220px]" alt="">
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Our team -->
+  <div class="pt-4 md:pt-16 text-center w-[85%] mx-auto swiper mySwiper overflow-visible">
+    <h1 class="text-[28px] md:text-[40px] font-bold mt-10">Our Team</h1>
+
+    <br>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div class="pt-8 px-8 bg-[#fafbfd] rounded-[16px]">
+        <h3 class="text-[20px]">Courtney Henry</h3>
+        <p class="text-[14px]">Development Manager</p>
+
+        <img class="mx-auto" src="/buying-car-website-tailwind/assets/team9-DXLumc1g.jpg" alt="">
+      </div>
+
+      <div class="pt-8 px-8 bg-[#eef0fc] rounded-[16px]">
+        <h3 class="text-[20px]">Jerome Bell</h3>
+        <p class="text-[14px]">Software Developer</p>
+
+        <img class="mx-auto" src="/buying-car-website-tailwind/assets/team5-DK94omda.jpg" alt="">
+      </div>
+
+      <div class="pt-8 px-8 bg-[#eaf2ff] rounded-[16px]">
+        <h3 class="text-[20px]">Jerome Bell</h3>
+        <p class="text-[14px]">Software Tester</p>
+
+        <img class="mx-auto" src="/buying-car-website-tailwind/assets/team6-1-D1fkMIGB.jpg" alt="">
+      </div>
+
+      <div class="pt-8 px-8 bg-[#ffeaf3] rounded-[16px]">
+        <h3 class="text-[20px]">Arlene McCoy</h3>
+        <p class="text-[14px]">Software Developer</p>
+
+        <img class="mx-auto" src="/buying-car-website-tailwind/assets/team7.jpg-PbTyu5F0.png" alt="">
+      </div>
+
+      <div class="pt-8 px-8 bg-[#f4f9f5] rounded-[16px]">
+        <h3 class="text-[20px]">Jenny Wilson</h3>
+        <p class="text-[14px]">UI/UX Designer</p>
+
+        <img class="mx-auto" src="/buying-car-website-tailwind/assets/team8.jpg-C7PFCKwX.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Blogs -->
+  <div class="pt-4 md:pt-16 text-center w-[85%] mx-auto swiper mySwiper overflow-visible">
+    <h1 class="text-[28px] md:text-[40px] font-bold mt-10">Latest Blog Posts</h1>
+
+    <br>
+
+    <div id="list_blog" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Blogs in JS -->
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div
+    class="bg-[#e8f5fc] w-[90%] p-12 md:p-24 mx-auto mt-8 md:mt-12 rounded-[16px] text-black flex justify-center md:justify-between items-center flex-wrap ">
+    <div>
+      <h1 class="text-[28px] md:text-[40px] font-bold">Explore Our Premium Brands</h1>
+      <p class="text-[15px] mt-3 text-justify font-light">
+        Excepteur sint occaecat cupidatat non
+        <br>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es
+      </p>
+
+      <br>
+
+      <a href="#">
+        <button
+          class="bg-[#405FF2] py-4 px-4 text-white rounded-[12px] flex gap-2 hover:bg-[#001684] hover:cursor-pointer focus:bg-[#001684] transition-all duration-700">
+          Show All Brands
+          <svg class="w-6 h-6 text-gray-800 dark:text-white rotate-[320deg]" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 12H5m14 0-4 4m4-4-4-4" />
+          </svg>
+        </button>
+      </a>
+    </div>
+
+    <div>
+      <img src="/buying-car-website-tailwind/assets/logo-brand-0ZZ33sgq.png" class="w-[350px]" alt="">
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="text-center">
+    <h1 class="text-[30px] font-bold">Join CarHut</h1>
+    <p class="text-[15px] mt-2">Receive pricing updates, shopping tips & more!</p>
+    <br>
+    <div
+      class="w-4/5 md:w-2/5 p-3 border-1 border-[#E9E9E9] border-solid mx-auto rounded-[16px] block md:flex justify-between items-center">
+      <input
+        class="w-full md:w-3/4 outline-none border-0 focus:outline-none focus:border-none  focus:ring-0 focus:border-0 bg-transparent h-full text-[20px]"
+        placeholder="Your email address" type="text">
+
+      <button
+        class="mt-5 md:mt-0 w-full text-center md:w-fit bg-[#405FF2] py-4 px-6 text-white rounded-[12px] hover:bg-[#001684] hover:cursor-pointer focus:bg-[#001684] transition-all duration-700">
+        Sign in
+      </button>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- footer -->
+
+  <div
+    class="pt-4 md:pt-16 text-center w-[85%] mx-auto border-t-2 border-solid border-[#E9E9E9] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-7   lg:gap-0">
+    <ul class="list-none text-left">
+      <li class="text-[20px] font-semibold">Company</li>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">About Us</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Blog</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Services</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">FAQs</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Terms</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Contact Us</li>
+      </a>
+    </ul>
+
+    <ul class="list-none text-left">
+      <li class="text-[20px] font-semibold">Quick Links</li>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Get in Touch</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Help center</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Live chat</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">How it works</li>
+      </a>
+    </ul>
+
+    <ul class="list-none text-left">
+      <li class="text-[20px] font-semibold">Our Brands</li>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Toyota</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Porsche</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Audi</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">BMW</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Ford</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Nissan</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Peugeot</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Volkswagen</li>
+      </a>
+    </ul>
+
+    <ul class="list-none text-left">
+      <li class="text-[20px] font-semibold">Vehicles Type</li>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Sedan</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Hatchback</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">SUV</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Hybrid</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Electric</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Coupe</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Truck</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Convertible</li>
+      </a>
+    </ul>
+
+    <ul class="list-none text-left w-full md:w-auto">
+      <li class="text-[20px] font-semibold">Sale Hours</li>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Monday – Friday: 09:00AM – 09:00
+          PM</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Saturday: 09:00AM – 07:00PM</li>
+      </a>
+      <a href="#">
+        <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">Sunday: Closed</li>
+      </a>
+
+      <br>
+      <br>
+
+      <ul class="list-none text-left">
+        <li class="text-[20px] font-semibold">Connect With Us</li>
+        <ul class="flex gap-7 items-center">
+          <a href="#">
+            <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">
+              <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                  d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </li>
+          </a>
+
+          <a href="#">
+            <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">
+              <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                  d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </li>
+          </a>
+
+          <a href="#">
+            <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">
+              <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="none" viewBox="0 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </li>
+          </a>
+
+          <a href="#">
+            <li class="text-[15px] mt-4 hover:text-[#405FF2] transition-all duration-500">
+              <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                  d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+                  clip-rule="evenodd" />
+                <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+              </svg>
+            </li>
+          </a>
+
+        </ul>
+      </ul>
+    </ul>
+  </div>
+
+  <br>
+  <br>
+
+  <hr class="border-[#E9E9E9]">
+
+  <div class="py-2 md:py-8 w-[85%] mx-auto flex justify-between flex-wrap gap-7 md:gap-0">
+    <p>© 2025 exemple.com. All rights reserved. -- <a href="https://github.com/MobinDevN" class="text-[#405FF2]">
+        Designed By Mobin Nayebizade </a></p>
+    <p>Terms & Conditions &#9679; Privacy Notice</p>
+  </div>
+
+  <!-- go to up -->
+
+  <a href="#header">
+    <div
+      class="absolute bottom-4 right-4 bg-[#405FF2] hover:bg-[#001684] hover:cursor-pointer focus:bg-[#001684] transition-all duration-700 rounded-full p-3">
+      <svg class="w-7 h-7 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 6v13m0-13 4 4m-4-4-4 4" />
+      </svg>
+    </div>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="src/main.js"></script>
+  <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
+
+</html>
