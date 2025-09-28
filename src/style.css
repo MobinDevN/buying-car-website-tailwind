@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@font-face {
+  font-family: DM-sans;
+  src: url(./fonts/DMSans-Regular.ttf);
+}
+
+@theme {
+  --font-Dmsans: DM-sans;
+}
